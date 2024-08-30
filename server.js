@@ -77,14 +77,12 @@ app.get('/api/me', (req, res) => {
     }
 });
 
-// Define Booking Schema and Model
+
 const BookingSchema = new mongoose.Schema({
-    name: String,
-    email: String,
+   
     date: String,
     start: String,
-    end: String,
-    estimatedCost: Number
+    end: String
 });
 
 const Booking = mongoose.model('Booking', BookingSchema);
@@ -101,7 +99,7 @@ const routesData = [
 
 // Endpoint for booking
 app.post('/api/bookings', async (req, res) => {
-    const { name, email, date, start, end } = req.body;
+    const {  date, start, end } = req.body;
     
     // Transform to lowercase for case-insensitive comparison
     const lowerStart = start.toLowerCase();
@@ -114,7 +112,7 @@ app.post('/api/bookings', async (req, res) => {
     const estimatedCost = route ? route.cost : 0;
     const middleRoutes = route ? route.middleRoutes.join(', ') : '';
 
-    const booking = new Booking({ name, email, date, start, end, estimatedCost });
+    const booking = new Booking({  date, start, end });
     try {
         await booking.save();
         res.status(201).json({
