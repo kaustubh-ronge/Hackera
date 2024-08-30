@@ -31,6 +31,18 @@
 
 
 
+.hero{
+    margin-top: 70px;
+    height: 100vh !important;
+}
+
+.hero img{
+    height: 650px !important;
+}
+
+.services{
+    height: 90vh;
+}
 
 /* Navbar Start */
 #navbar {
@@ -72,6 +84,10 @@
     color: var(--primary-color);
 }
 
+.nav-item .nav-link.active{
+    color: var(--primary-color);
+}
+
 #navbar form button {
     background: orange;
     color: white;
@@ -107,7 +123,7 @@
 /* hero section */
 
 .hero .carousel-inner .carousel-item img {
-    height: 650px;
+    height: 600px;
     width: 100%;
 }
 
@@ -271,7 +287,7 @@ form input:hover{
 /* Section Services Start */
 .services{
     background: #f9f9f9;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .services .card{
     box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
