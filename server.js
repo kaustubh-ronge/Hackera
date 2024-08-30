@@ -29,9 +29,7 @@ function checkAuth(req, res, next) {
     }
 }
 
-// Routes
 
-// Registration route
 app.post('/api/register', async (req, res) => {
     try {
         const { name, email, password, phone, address, age } = req.body;
