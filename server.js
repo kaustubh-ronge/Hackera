@@ -99,15 +99,14 @@ const Booking = mongoose.model('Booking', BookingSchema);
 //     { start: 'nagpur', end: 'aurangabad', cost: 900, middleRoutes: ['bhusawal'] }
 // ];
 
-// Endpoint for booking
 app.post('/api/bookings', async (req, res) => {
     const {  date, start, end } = req.body;
     
-    // Transform to lowercase for case-insensitive comparison
+  
     const lowerStart = start.toLowerCase();
     const lowerEnd = end.toLowerCase();
     
-    // Find the route cost and middle routes
+   
     const route = routesData.find(route => 
         route.start === lowerStart && route.end === lowerEnd
     );
