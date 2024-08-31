@@ -647,3 +647,9 @@ transform: scale(1.0);
     margin-right: 30px;
 }
 
+
+/* planner */
+
+#planner{
+    height: 100vh;
+}
