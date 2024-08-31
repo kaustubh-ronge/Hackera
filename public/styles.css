@@ -622,7 +622,7 @@ transform: scale(1.0);
     color: white;
 }
 
-.safety-air-img img{
+.safety-air-img img, .safety-train img, .safety-bus img{
     height: 500px;
     width: 450px;
     margin-left: 60px;

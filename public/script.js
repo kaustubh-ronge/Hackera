@@ -1,36 +1,4 @@
 document.addEventListener('DOMContentLoaded', async () => {
-//     try {
-//         const response = await fetch('/api/me');
-//         if (response.ok) {
-//             const data = await response.json();
-//             // Show user info and logout link, hide login and register links
-//             document.getElementById('user-info').style.display = 'block';
-//             document.getElementById('username').textContent = `Welcome, ${data.name}`;
-//             document.getElementById('logout').style.display = 'inline'; // Show logout link
-//             document.getElementById('login-link').style.display = 'none';
-//             document.getElementById('register-link').style.display = 'none';
-//         } else {
-//             // Hide user info and logout link when not logged in
-//             document.getElementById('user-info').style.display = 'none';
-//             document.getElementById('logout').style.display = 'none';
-//             document.getElementById('login-link').style.display = 'inline';
-//             document.getElementById('register-link').style.display = 'inline';
-//         }
-//     } catch (error) {
-//         console.error('Error fetching user data:', error);
-//     }
-// });
-
-// // Logout functionality
-// document.getElementById('logout').addEventListener('click', async () => {
-//     try {
-//         await fetch('/api/logout', { method: 'POST' });
-//         window.location.reload();
-//     } catch (error) {
-//         console.error('Error logging out:', error);
-//     }
-
-
 
 
 document.getElementById('bookingForm').addEventListener('submit', async (event) => {
@@ -507,52 +475,7 @@ document.getElementById('logout').addEventListener('click', async () => {
         }, 500); 
     });
 
-    let map;
-let directionsService;
-let directionsRenderer;
-
-function initMap() {
     
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 }, 
-        zoom: 8
-    });
-
-    
-    directionsService = new google.maps.DirectionsService();
-    directionsRenderer = new google.maps.DirectionsRenderer();
-    directionsRenderer.setMap(map);
-
-    
-    document.getElementById('get-directions').addEventListener('click', function() {
-        calculateAndDisplayRoute();
-    });
-}
-
-function calculateAndDisplayRoute() {
-    const destination = document.getElementById('location-input').value;
-    
-    if (!destination) {
-        alert('Please enter a destination.');
-        return;
-    }
-
-    directionsService.route({
-        origin: { lat: -34.397, lng: 150.644 }, 
-        destination: destination,
-        travelMode: 'DRIVING'
-    }, (response, status) => {
-        if (status === 'OK') {
-            directionsRenderer.setDirections(response);
-        } else {
-            window.alert('Directions request failed due to ' + status);
-        }
-    });
-}
-
-
-window.onload = initMap;
-
 
 });
 
