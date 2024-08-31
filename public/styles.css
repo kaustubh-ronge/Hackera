@@ -53,9 +53,37 @@
 
 
 
-
-
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-right: 1px solid black; /* Black border between columns */
+}
+th {
+    background-color: #007BFF; /* Blue background for header */
+    color: white;
+    border-top: 1px solid black; /* Black border on top of header */
+    border-bottom: 1px solid black; /* Black border on bottom of header */
+}
+tr {
+    border-bottom: 1px solid black; /* Black border between rows */
+}
+tr:last-child {
+    border-bottom: none; /* Remove bottom border from last row */
+}
+tr:nth-child(even) {
+    background-color: #f1f1f1; /* Light grey background for even rows */
+}
+tr:nth-child(odd) {
+    background-color: #e0e0e0; /* Grey background for odd rows */
+}
+tr:hover {
+    background-color: #d1d1d1; /* Darker grey on hover */
+}
 
 
 
@@ -200,6 +228,33 @@
 #login:hover {
     color: var(--primary-color);
 
+}
+#logout {
+    margin-left: 500px;
+    text-decoration: none;
+    position: absolute;
+    left:8px;
+    bottom: -2px;
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    transition: 0.5s ease;
+}
+
+#logout:hover {
+    color: var(--primary-color);
+
+}
+
+#username{
+    margin-left: 120px;
+    text-decoration: none;
+    /* position: absolute; */
+    left:8px;
+    bottom: -12px;
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
 }
 
 #register {
