@@ -36,8 +36,71 @@
 
 
 
+#home h1 span {
+    color: var(--primary-color);
+}
+
+#home h1 {
+    font-size: 54px;
+    line-height: 68px;
+    font-weight: 800;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.banner_wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 750px;
+    background-image: url('./images/pexels-dreamypixel-547116.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 200px 0 100px 0;
+}
+
+
+#home .container h1,
+#home .container span {
+    margin-right: 100px;
+}
+
+.header-scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Black background with transparency */
+    backdrop-filter: blur(10px);
+    /* Apply a blur effect to the background */
+    box-shadow: 0 4px 6px 0 rgb(182, 182, 182);
+    z-index: 100;
+    transition: all 0.3s ease-in;
+}
+
+
+
+
+.header_scrolled .nav-item .nav-link.active,
+.header_scrolled .nav-item .nav-link:hover {
+    color: white;
+}
+
 .hero {
-    margin-top: 70px;
+    margin-top: 0px;
     height: 100vh !important;
 }
 
@@ -60,6 +123,14 @@
 #navbar {
     background: #f9f9f9;
     padding: 0px;
+}
+
+
+
+.navbar-brand img {
+    height: 50px;
+    width: 50px;
+    margin-top: -5px;
 }
 
 #logo {
@@ -118,8 +189,17 @@
     margin-left: 500px;
     text-decoration: none;
     position: absolute;
-    left: 10px;
+    left:8px;
     bottom: -15px;
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    transition: 0.5s ease;
+}
+
+#login:hover {
+    color: var(--primary-color);
+
 }
 
 #register {
@@ -128,6 +208,15 @@
     position: absolute;
     left: 60px;
     bottom: -15px;
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    transition: 0.5s ease;
+}
+
+#register:hover{
+    color: var(--primary-color);
+
 }
 
 /* Navbar End */
@@ -149,16 +238,17 @@
 
 }
 
-.carousel-item{
+.carousel-item {
     position: relative;
 }
+
 .carousel-caption p {
     bottom: 290px;
     left: 70px;
     font-family: "Poppins", sans-serif;
     font-size: 35px;
     font-weight: 800;
-    color:blue;
+    color: blue;
     position: absolute;
 
 }
@@ -187,35 +277,7 @@ h1 {
     margin-top: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-table,
-th,
-td {
-    border: 1px solid #dee2e6;
-}
-
-th,
-td {
-    padding: 12px;
-    text-align: left;
-}
-
-thead {
-    background-color: #007bff;
-    color: white;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tbody tr:hover {
-    background-color: #e9ecef;
-}
 
 /* book */
 
@@ -330,7 +392,11 @@ form input:hover {
 /* Section Packages End */
 
 
+/* about */
 
+#checkCities{
+    background: var(--primary-color);
+}
 
 /* Section Services Start */
 .services {
@@ -394,7 +460,7 @@ form input:hover {
 #about-section {
     height: 100vh;
 
-    background: url('./images/india.png');
+    background: url('./images/bg.jpg');
     background-size: cover;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -471,8 +537,8 @@ input:focus {
 }
 
 .about-btn button:hover {
-    background-color: var(--primary-color);
-    transform: translatey(-0.2rem);
+    background-color: var(--main-text) !important;
+    transform: scale(1.0);
 }
 
 
@@ -490,10 +556,11 @@ input:focus {
 /* weather */
 
 #weather {
-    background: url(images/about-img.png);
+    background: url(./images/weather.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: 50%;
 
 }
 
@@ -510,59 +577,67 @@ input:focus {
 
 /* gallery section */
 
-#gallery{
+#gallery {
     height: 100vh;
     background-color: var(--text-gray);
 }
-#gallery .row{
+
+#gallery .row {
 
     margin-top: 0px;
 
 }
 
-.gallery-card{
+.gallery-card {
     overflow: hidden;
     transition: all 1s ease-in-out;
     cursor: pointer;
 }
 
-.gallery-card:hover{
+.gallery-card:hover {
     transform: translateY(-0.4rem);
     /* box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px; */
 }
 
 
-.gallery-card img{
+.gallery-card img {
     transition: all 2s ease-in-out;
     overflow: hidden;
 }
 
-.gallery-card img:hover{
-transform: scale(1.0);
+.gallery-card img:hover {
+    transform: scale(1.0);
 }
 
 
 
-#gallery .gallery-card img{
+#gallery .gallery-card img {
     height: 250px;
     width: 370px;
     margin-top: 30px;
     border-radius: 10px;
 }
 
-#safety{
+/* safety section */
+
+
+
+#safety {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+
 }
 
-.safety-container{
+
+
+.safety-container {
     margin-top: 20px;
-    
- 
- 
+
+
+
     /* border: 1px solid black; */
     justify-content: center;
     padding-bottom: -100px;
@@ -574,17 +649,18 @@ transform: scale(1.0);
     margin-top: 60px;
 
 }
-.tab-pane{
+
+.tab-pane {
     font-style: italic;
 }
 
-#safety .container{
-    
+#safety .container {
+
     margin-top: 50px;
 }
 
 #safety .nav-link,
-#safety .nav-link.active{
+#safety .nav-link.active {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
@@ -595,34 +671,37 @@ transform: scale(1.0);
     border-radius: 20px;
 }
 
-#safety .nav-link.active{
+#safety .nav-link.active {
     background-color: var(--main-text);
 }
+
 #safety .nav-link:hover,
-#safety .nav-link.active:hover{
+#safety .nav-link.active:hover {
     background: var(--primary-text);
 }
 
-#safety .container button{
+#safety .container button {
     color: black;
     margin-top: 50px;
-    
+
 }
 
-#safety .container .nav-pills{
+#safety .container .nav-pills {
     margin-left: 28vw;
 }
 
-#safety .main-txt{
+#safety .main-txt {
     margin-top: 80px;
 }
 
 
-#safety .container button:hover{
+#safety .container button:hover {
     color: white;
 }
 
-.safety-air-img img, .safety-train img, .safety-bus img{
+.safety-air-img img,
+.safety-train img,
+.safety-bus img {
     height: 500px;
     width: 450px;
     margin-left: 60px;
@@ -633,23 +712,25 @@ transform: scale(1.0);
 
 @keyframes airfloat {
 
-    0%,100%{
+    0%,
+    100% {
         transform: translateY(0rem);
 
     }
-    50%{
+
+    50% {
         transform: translateY(-3.5rem);
     }
-    
+
 }
 
-.safety-txt{
+.safety-txt {
     margin-right: 30px;
 }
 
 
 /* planner */
 
-#planner{
+#planner {
     height: 100vh;
 }

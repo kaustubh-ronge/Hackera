@@ -1,5 +1,33 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
+    let nav = document.querySelector('.navbar');
+window.onscroll =  function (){
+    if(document.documentElement.scrollTop > 10){
+        nav.classList.add('header-scrolled')
+    }
+    else{
+        nav.classList.remove('header-scrolled')
+    }
+}
+
+
+let screenWidth = window.innerWidth
+
+if(screenWidth>320 && screenWidth<438){
+    nav.style ='background-color:#091020;'
+}
+
+
+
+
+let navBar = document.querySelectorAll(".nav-link")
+let navCollapse = document.querySelector(".navbar-collapse.collapse")
+navBar.forEach(function(a){
+    a.addEventListener("click",()=>{
+        navCollapse.classList.remove("show")
+    })
+})
+
 
 document.getElementById('bookingForm').addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -424,10 +452,10 @@ function predictCities() {
 
     if (route) {
         const row = document.createElement('tr');
-        row.innerHTML = `<td>${route.start} to ${route.end}</td><td>rs.${route.cost}</td><td>${route.middleRoutes.join(', ')}</td>`;
+        row.innerHTML = `<td style="background-color:white; ">${route.start} to ${route.end}</td><td style="background-color:white;">rs.${route.cost}</td><td style="background-color:white;">${route.middleRoutes.join(', ')}</td>`;
         tableBody.appendChild(row);
     } else {
-        tableBody.innerHTML = '<tr><td colspan="3" class="text-center">No available routes for the selected locations</td></tr>';
+        tableBody.innerHTML = '<tr><td style="background-color:white;" colspan="3" class="text-center">No available routes for the selected locations</td></tr>';
     }
 }
 

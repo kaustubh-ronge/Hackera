@@ -102,3 +102,39 @@ button:hover {
 .cheapest-route h2 {
     margin: 0;
 }
+
+.route-table {
+    border: 2px solid black;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.route-table td, .route-table th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the two table sections */
+    padding: 10px;
+}
+
+.table-wrapper {
+    flex: 1; /* Each div takes equal space, so both tables are side by side */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.route-table {
+    width: 100%; /* Table takes the full width of its container */
+    border-collapse: collapse;
+}
+
+.route-table td, .route-table th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}

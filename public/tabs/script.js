@@ -839,35 +839,54 @@ function displayRoutes() {
         const totalCost = calculateRouteCost(route);
 
        
-        let tableHTML = `<table class="route-table">
-            <thead>
-                <tr><th colspan="2">${isReversed ? `${route.name} (Reversed)` : route.name}</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Total Distance:</td><td>${route.distance} km</td></tr>
-                <tr><td>Travel Cost:</td><td>₹${(route.distance * 0.5).toFixed(2)}</td></tr>
-                <tr><td>Hotel Costs:</td><td>₹${route.hotels.reduce((total, hotel) => total + hotel.cost, 0)}</td></tr>
-                <tr><td>Food Costs:</td><td>₹${route.foodOptions.reduce((total, food) => total + (food.cost || 0), 0)}</td></tr>
-                <tr><td>Places to Visit Costs:</td><td>₹${route.placesToVisit.reduce((total, place) => total + (place.cost || 0), 0)}</td></tr>
-                <tr><td>Transportation Costs:</td><td>₹${route.transportation.reduce((total, transport) => total + (transport.cost || 0), 0)}</td></tr>
-                <tr><td><strong>Total Estimated Cost:</strong></td><td><strong>₹${totalCost.toFixed(2)}</strong></td></tr>
-            </tbody>
-            <tfoot>
-                <tr><th colspan="2">Steps:</th></tr>
-                ${route.steps.map(step => `<tr><td colspan="2">${step}</td></tr>`).join('')}
-                <tr><th colspan="2">Suggested Hotels:</th></tr>
-                ${route.hotels.map(hotel => `<tr><td colspan="2">${hotel.name} at ${hotel.location} - ₹${hotel.cost}</td></tr>`).join('')}
-                <tr><th colspan="2">Food Options:</th></tr>
-                ${route.foodOptions.map(food => `<tr><td colspan="2">${food.name} at ${food.location} - Specialty: ${food.specialty}</td></tr>`).join('')}
-                <tr><th colspan="2">Places to Visit:</th></tr>
-                ${route.placesToVisit.map(place => `<tr><td colspan="2">${place.name} - ${place.description}</td></tr>`).join('')}
-                <tr><th colspan="2">Transportation:</th></tr>
-                ${route.transportation.map(transport => `<tr><td colspan="2">${transport.mode} - ${transport.description}</td></tr>`).join('')}
-            </tfoot>
-        </table>`;
+        let tableHTML = `
+        <div class="tables-container">
+            <!-- Left Side Data -->
+            <div class="table-wrapper">
+                <table class="route-table">
+                    <thead>
+                        <tr><th colspan="2">${isReversed ? `${route.name} (Reversed)` : route.name}</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Total Distance:</td><td>${route.distance} km</td></tr>
+                        <tr><td>Travel Cost:</td><td>₹${(route.distance * 0.5).toFixed(2)}</td></tr>
+                        <tr><td>Hotel Costs:</td><td>₹${route.hotels.reduce((total, hotel) => total + hotel.cost, 0)}</td></tr>
+                        <tr><td>Food Costs:</td><td>₹${route.foodOptions.reduce((total, food) => total + (food.cost || 0), 0)}</td></tr>
+                        <tr><td>Places to Visit Costs:</td><td>₹${route.placesToVisit.reduce((total, place) => total + (place.cost || 0), 0)}</td></tr>
+                        <tr><td>Transportation Costs:</td><td>₹${route.transportation.reduce((total, transport) => total + (transport.cost || 0), 0)}</td></tr>
+                        <tr><td><strong>Total Estimated Cost:</strong></td><td><strong>₹${totalCost.toFixed(2)}</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Right Side Data -->
+            <div class="table-wrapper">
+                <table class="route-table">
+                    <thead>
+                        <tr><th colspan="2">${isReversed ? `${route.name} (Reversed)` : route.name}</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th colspan="2">Steps:</th></tr>
+                        ${route.steps.map(step => `<tr><td colspan="2">${step}</td></tr>`).join('')}
+                        <tr><th colspan="2">Suggested Hotels:</th></tr>
+                        ${route.hotels.map(hotel => `<tr><td colspan="2">${hotel.name} at ${hotel.location} - ₹${hotel.cost}</td></tr>`).join('')}
+                        <tr><th colspan="2">Food Options:</th></tr>
+                        ${route.foodOptions.map(food => `<tr><td colspan="2">${food.name} at ${food.location} - Specialty: ${food.specialty}</td></tr>`).join('')}
+                        <tr><th colspan="2">Places to Visit:</th></tr>
+                        ${route.placesToVisit.map(place => `<tr><td colspan="2">${place.name} - ${place.description}</td></tr>`).join('')}
+                        <tr><th colspan="2">Transportation:</th></tr>
+                        ${route.transportation.map(transport => `<tr><td colspan="2">${transport.mode} - ${transport.description}</td></tr>`).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>`;
+        
+        
+    
 
         return tableHTML;
     }
+
 
     // Display regular routes
     filteredRoutes.forEach(route => {
