@@ -332,6 +332,28 @@ h1 {
     margin-top: 20px;
 }
 
+#abt-btn{
+    text-decoration: none;
+    left: 290px;
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    top: 70%;
+    font-weight: 500;
+    position: absolute;
+    color: black;
+    border: 2px solid var(--primary-color);
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+#abt-btn:hover{
+    background: var(--main-text);
+    color: white;
+}
 
 
 /* book */
@@ -574,7 +596,7 @@ form input:hover {
     padding-left: 20px;
     padding-right: 0px;
 
-    border-radius: 30px;
+    border-radius: 20px;
     text-align: start;
 
 }
@@ -616,6 +638,7 @@ input:focus {
     background-attachment: fixed;
     background-size: cover;
     background-position: 50%;
+    height: 100vh;
 
 }
 
@@ -788,4 +811,79 @@ input:focus {
 
 #planner {
     height: 100vh;
+}
+
+/*** Footer ***/
+.footer{
+    margin-top: 180px !important;
+}
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-weight: normal;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+.back-to-top{
+    position: relative;
+    bottom: 100px;
+    left:95%;
 }
