@@ -127,6 +127,21 @@ app.post('/api/bookings', async (req, res) => {
     }
 });
 
+app.post('/api/logout', (req, res) => {
+    res.clearCookie('username');
+    res.send('Logged out');
+});
+
+// Route to get the logged-in user's data
+app.get('/api/me', (req, res) => {
+    if (req.cookies.username) {
+        res.json({ name: req.cookies.username });
+    } else {
+        res.status(401).send('Not authenticated');
+    }
+});
+
+
 
 
 // Start the server

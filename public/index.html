@@ -54,7 +54,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#about-section">About Us</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="#services">Services</a>
           </li>
@@ -68,21 +67,25 @@
             <a class="nav-link" href="booking/hotel.html" target="_blank">Hotel Book</a>
           </li>
 
-
-
           <div id="authLinks">
             <ul>
-              <li><a id="login" href="login.html">Login</a></li>
-              <span>
+              <li id="user-info" style="width: 100%;; margin-left: 200px; margin-top: -10px;  display: flex; display: none;">
+                <span id="username"></span>
+                <a id="logout" href="#" style="display: none;">Logout</a>
+              </li>
+              <li id="login-link">
+                <a id="login" href="login.html">Login</a>
+              </li>
+              <span id="register-link">
                 <li><a id="register" href="register.html">Register</a></li>
               </span>
+            </ul>
           </div>
         </ul>
-
       </div>
     </div>
-  </nav>
-  <!-- Navbar End -->
+</nav>
+
 
   <section class="hero">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -258,6 +261,9 @@
   <section id="weather">
     <div class="container">
       <div class="row">
+        <div class="main-txt" style="margin-top: 80px;">
+          <h1><span>W</span>eather</h1>
+        </div>
         <div class="col-6 mx-auto">
           <div class="custom-text">
               <h1>Welcome To Our Weather App</h1>
@@ -349,7 +355,7 @@
       easing: 'ease-in-out',
       origin: 'bottom',
       interval: 100,
-      viewFactor: 0.2 // Trigger when 20% of the element is visible
+      viewFactor: 0.2 
     });
     ScrollReveal().reveal(' form, input', {
       delay: 300,
@@ -359,7 +365,7 @@
       easing: 'ease-in',
       origin: 'left',
       interval: 150,
-      viewFactor: 0.5 // Trigger when 20% of the element is visible
+      viewFactor: 0.5 
     });
     ScrollReveal().reveal(' table, th,tr,tbody', {
       delay: 300,
@@ -369,7 +375,7 @@
       easing: 'ease-in',
       origin: 'right',
       interval: 150,
-      viewFactor: 0.5 // Trigger when 20% of the element is visible
+      viewFactor: 0.5
     });
     ScrollReveal().reveal(' .custom-text', {
       delay: 300,
@@ -379,7 +385,7 @@
       easing: 'ease-in',
       origin: 'left',
       interval: 150,
-      viewFactor: 0.5 // Trigger when 20% of the element is visible
+      viewFactor: 0.5 
     });
     ScrollReveal().reveal('#weather .container .card', {
       delay: 300,
@@ -389,7 +395,37 @@
       easing: 'ease-in',
       origin: 'right',
       interval: 150,
-      viewFactor: 0.5 // Trigger when 20% of the element is visible
+      viewFactor: 0.5 
+    });
+    ScrollReveal().reveal('.main-txt h1,.main-txt h1 span ', {
+      delay: 300,
+      reset: true,
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-in',
+      origin: 'left',
+      interval: 150,
+      viewFactor: 0.5 
+    });
+    ScrollReveal().reveal('.main-txt h1', {
+      delay: 300,
+      reset: true,
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-in',
+      origin: 'left',
+      interval: 150,
+      viewFactor: 0.5 
+    });
+    ScrollReveal().reveal('.main-txt h1 span ', {
+      delay: 350,
+      reset: true,
+      distance: '50px',
+      duration: 850,
+      easing: 'ease-in',
+      origin: 'left',
+      interval: 190,
+      viewFactor: 0 
     });
 
 
