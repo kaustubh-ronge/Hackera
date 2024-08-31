@@ -12,19 +12,19 @@ const HotelBooking = require('./models/HotelBooking');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Connect to MongoDB
+
 mongoose.connect('mongodb://localhost:27017/yourDatabaseName')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Middleware
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
 app.use(express.static('public'));
 
-// Helper function for checking if user is authenticated
+
 function checkAuth(req, res, next) {
     if (req.cookies.username) {
         next();
@@ -47,7 +47,7 @@ app.post('/api/register', async (req, res) => {
     }
 });
 
-// Login route
+
 app.post('/api/login', async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -99,15 +99,14 @@ const Booking = mongoose.model('Booking', BookingSchema);
 //     { start: 'nagpur', end: 'aurangabad', cost: 900, middleRoutes: ['bhusawal'] }
 // ];
 
-// Endpoint for booking
 app.post('/api/bookings', async (req, res) => {
     const {  date, start, end } = req.body;
     
-    // Transform to lowercase for case-insensitive comparison
+    
     const lowerStart = start.toLowerCase();
     const lowerEnd = end.toLowerCase();
     
-    // Find the route cost and middle routes
+ 
     const route = routesData.find(route => 
         route.start === lowerStart && route.end === lowerEnd
     );
@@ -132,7 +131,7 @@ app.post('/api/logout', (req, res) => {
     res.send('Logged out');
 });
 
-// Route to get the logged-in user's data
+
 app.get('/api/me', (req, res) => {
     if (req.cookies.username) {
         res.json({ name: req.cookies.username });
@@ -144,7 +143,7 @@ app.get('/api/me', (req, res) => {
 
 
 
-// Start the server
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });

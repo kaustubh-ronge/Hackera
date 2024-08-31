@@ -1,11 +1,11 @@
-// Sample predefined routes data with start and end points in Maharashtra
+
 const routes = [
     {
         id: 1,
         start: "Mumbai",
         end: "Pune",
         name: "Mumbai to Pune via Lonavala",
-        distance: 150, // Distance in km
+        distance: 150,
         steps: [
             "Start at Mumbai",
             "Continue to Navi Mumbai",
@@ -4166,32 +4166,30 @@ const routes = [
 
 ];
 
-// Function to calculate route cost based on distance, hotel prices, food, places to visit, and transportation
+
 function calculateRouteCost(route) {
-    const costPerKm = 0.5; // Example cost per km
+    const costPerKm = 0.5; 
     const travelCost = route.distance * costPerKm;
 
-    // Calculate total hotel costs (sum of all hotel costs on the route)
+   
     const totalHotelCost = route.hotels.reduce((total, hotel) => total + hotel.cost, 0);
 
-    // Calculate total food costs (sum of all food costs on the route)
+    
     const totalFoodCost = route.foodOptions.reduce((total, food) => total + food.cost, 0);
 
-    // Calculate total places to visit costs (sum of all costs for visiting places)
+   
     const totalPlacesCost = route.placesToVisit.reduce((total, place) => total + place.cost, 0);
 
-    // Calculate total transportation costs (sum of all transportation costs)
+    
     const totalTransportCost = route.transportation.reduce((total, transport) => total + transport.cost, 0);
 
-    // Total cost is travel cost + hotel costs + food costs + places to visit costs + transportation costs
     const totalCost = travelCost + totalHotelCost + totalFoodCost + totalPlacesCost + totalTransportCost;
     return totalCost;
 }
 
-// Function to reverse steps and hotels for reversed routes
 function reverseRoute(route) {
     const reversedSteps = [...route.steps].reverse().map(step => {
-        // Replacing start and end points in the step description
+        
         return step.replace(route.start, route.end).replace(route.end, route.start);
     });
 
@@ -4286,14 +4284,14 @@ function displayRoutes() {
     }
 
 
-    // Display regular routes
+    
     filteredRoutes.forEach(route => {
         const routeDiv = document.createElement("div");
         routeDiv.className = "route";
         routeDiv.innerHTML = createRouteTable(route);
         resultsDiv.appendChild(routeDiv);
 
-        // Check for the cheapest route
+       
         const totalCost = calculateRouteCost(route);
         if (totalCost < lowestCost) {
             lowestCost = totalCost;
@@ -4301,7 +4299,7 @@ function displayRoutes() {
         }
     });
 
-    // Display reversed routes
+    
     reversedRoutes.forEach(route => {
         const reversedRoute = reverseRoute(route);
         const routeDiv = document.createElement("div");
@@ -4309,7 +4307,7 @@ function displayRoutes() {
         routeDiv.innerHTML = createRouteTable(reversedRoute, true);
         resultsDiv.appendChild(routeDiv);
 
-        // Check for the cheapest reversed route
+      
         const totalCost = calculateRouteCost(reversedRoute);
         if (totalCost < lowestCost) {
             lowestCost = totalCost;
@@ -4317,7 +4315,7 @@ function displayRoutes() {
         }
     });
 
-    // Display the cheapest route information
+   
     if (cheapestRoute) {
         const cheapestRouteDiv = document.createElement("div");
         cheapestRouteDiv.className = "cheapest-route";
@@ -4327,8 +4325,7 @@ function displayRoutes() {
     }
 }
 
-// Attach event listener to the button
-// Attach event listener to the button
+
 document.getElementById("calculate").addEventListener("click", () => {
     displayRoutes();
 });

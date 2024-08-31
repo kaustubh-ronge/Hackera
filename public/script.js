@@ -58,7 +58,7 @@ document.getElementById('checkCities').addEventListener('click', () => {
     predictCities();
 });
 
-// Define static routes and their estimated costs for Maharashtra
+
 const routesData = [
     { start: 'Mumbai', end: 'Pune', cost: 500, middleRoutes: ['Lonavala', 'Khandala'] },
     { start: 'Mumbai', end: 'Nagpur', cost: 1800, middleRoutes: ['Lonavala', 'Pune', 'Solapur', 'Aurangabad', 'Nanded', 'Wardha'] },
@@ -464,14 +464,14 @@ function predictCities() {
         const response = await fetch('/api/me');
         if (response.ok) {
             const data = await response.json();
-            // Show user info and logout link, hide login and register links
+           
             document.getElementById('user-info').style.display = 'block';
             document.getElementById('username').textContent = `Welcome, ${data.name}`;
-            document.getElementById('logout').style.display = 'inline'; // Show logout link
+            document.getElementById('logout').style.display = 'inline'; 
             document.getElementById('login-link').style.display = 'none';
             document.getElementById('register-link').style.display = 'none';
         } else {
-            // Hide user info and logout link when not logged in
+          
             document.getElementById('user-info').style.display = 'none';
             document.getElementById('logout').style.display = 'none';
             document.getElementById('login-link').style.display = 'inline';
@@ -482,7 +482,6 @@ function predictCities() {
     }
 });
 
-// Logout functionality
 document.getElementById('logout').addEventListener('click', async () => {
     try {
         await fetch('/api/logout', { method: 'POST' });

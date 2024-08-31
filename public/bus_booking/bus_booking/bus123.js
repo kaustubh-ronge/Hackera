@@ -1,4 +1,4 @@
-// Static data for routes
+
 const routes = [
     // Route 26
     {
@@ -1673,23 +1673,22 @@ const routes = [
     },
 
     
-    // Add more routes here if needed
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Handle form submission for route search
+   
     document.getElementById('routeForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); 
 
-        // Get form values
+      
         const start = document.getElementById('start').value.trim();
         const end = document.getElementById('end').value.trim();
         const date = document.getElementById('date').value;
 
-        // Clear previous results
+       
         document.getElementById('result').innerHTML = '';
 
-        // Find matching routes
+        
         const matchingRoutes = routes.filter(route =>
             route.start.toLowerCase() === start.toLowerCase() &&
             route.end.toLowerCase() === end.toLowerCase()
@@ -1728,18 +1727,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function bookBus(routeId) {
-    // Get booking details
+    
     const busType = document.querySelector('#busType').value;
     const adults = document.querySelector('#adults').value;
     const children = document.querySelector('#children').value;
     
-    // Get bus price
+    
     const busPrice = document.querySelector('#busType option:checked').dataset.price;
     
-    // Calculate total cost
+    
     const totalCost = (parseInt(adults) + parseInt(children)) * parseInt(busPrice);
 
-    // Display booking details
+    
     alert(`Booking details:
     Route ID: ${routeId}
     Bus Type: ${busType}
@@ -1747,6 +1746,6 @@ function bookBus(routeId) {
     Number of Children: ${children}
     Total Cost: ₹${totalCost}`);
     
-    // Redirect to payment page (if needed)
+  
     window.location.href = `pay123.html?cost=${totalCost}`;
 }

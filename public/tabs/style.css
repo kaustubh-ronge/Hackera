@@ -117,19 +117,19 @@ button:hover {
 .tables-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Space between the two table sections */
+    gap: 20px; 
     padding: 10px;
 }
 
 .table-wrapper {
-    flex: 1; /* Each div takes equal space, so both tables are side by side */
+    flex: 1; 
     padding: 10px;
     box-sizing: border-box;
     border: 2px solid black;
 }
 
 .route-table {
-    width: 100%; /* Table takes the full width of its container */
+    width: 100%; 
     border-collapse: collapse;
 }
 
