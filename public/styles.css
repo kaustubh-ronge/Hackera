@@ -22,7 +22,7 @@
     --bg-white: #cfcfcf;
     --gray-color: #c6c9d8bf;
     --gradient-color: linear-gradient(-224deg, var(--primary-color) 0, #337DFF 100%);
-
+    --main-text: #f0390f;
     --primary: #25316D;
     --secondary: #2B9BFF;
     --light: #EFFDF5;
@@ -47,6 +47,13 @@
 
 .services {
     height: 100vh;
+}
+
+.car-control i {
+    font-size: 40px;
+    background: var(--primary-text);
+    padding: 15px;
+    border-radius: 50%;
 }
 
 /* Navbar Start */
@@ -130,6 +137,30 @@
 .hero .carousel-inner .carousel-item img {
     height: 750px !important;
     width: 100%;
+}
+
+.carousel-caption h3 {
+    margin-bottom: 400px;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--main-text);
+
+
+}
+
+.carousel-item{
+    position: relative;
+}
+.carousel-caption p {
+    bottom: 290px;
+    left: 70px;
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    color:blue;
+    position: absolute;
+
 }
 
 /* booking section */
@@ -306,10 +337,12 @@ form input:hover {
     background: #f9f9f9;
 
 }
-.services .row .main-txt h1{
+
+.services .row .main-txt h1 {
     margin-top: 80px;
 }
-.services .col-md-4{
+
+.services .col-md-4 {
     margin-top: 20px;
 }
 
@@ -318,8 +351,8 @@ form input:hover {
     border: none;
     cursor: pointer;
     /* width: 90% !important; */
-    transition:  0s ease-out;
-    
+    transition: 0s ease-out;
+
 }
 
 .services .card i {
@@ -436,6 +469,7 @@ input:focus {
     border: 2px solid var(--primary-text) !important;
     background: transparent;
 }
+
 .about-btn button:hover {
     background-color: var(--primary-color);
     transform: translatey(-0.2rem);
@@ -455,7 +489,7 @@ input:focus {
 
 /* weather */
 
-#weather{
+#weather {
     background: url(images/about-img.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -473,3 +507,143 @@ input:focus {
     padding: 20px;
     border-radius: 8px;
 }
+
+/* gallery section */
+
+#gallery{
+    height: 100vh;
+    background-color: var(--text-gray);
+}
+#gallery .row{
+
+    margin-top: 0px;
+
+}
+
+.gallery-card{
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery-card:hover{
+    transform: translateY(-0.4rem);
+    /* box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px; */
+}
+
+
+.gallery-card img{
+    transition: all 2s ease-in-out;
+    overflow: hidden;
+}
+
+.gallery-card img:hover{
+transform: scale(1.0);
+}
+
+
+
+#gallery .gallery-card img{
+    height: 250px;
+    width: 370px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+#safety{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.safety-container{
+    margin-top: 20px;
+    
+ 
+ 
+    /* border: 1px solid black; */
+    justify-content: center;
+    padding-bottom: -100px;
+    line-height: 30px;
+    text-align: justify;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 38px;
+    border-radius: 10px;
+    margin-top: 60px;
+
+}
+.tab-pane{
+    font-style: italic;
+}
+
+#safety .container{
+    
+    margin-top: 50px;
+}
+
+#safety .nav-link,
+#safety .nav-link.active{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px;
+    border-radius: 20px;
+}
+
+#safety .nav-link.active{
+    background-color: var(--main-text);
+}
+#safety .nav-link:hover,
+#safety .nav-link.active:hover{
+    background: var(--primary-text);
+}
+
+#safety .container button{
+    color: black;
+    margin-top: 50px;
+    
+}
+
+#safety .container .nav-pills{
+    margin-left: 28vw;
+}
+
+#safety .main-txt{
+    margin-top: 80px;
+}
+
+
+#safety .container button:hover{
+    color: white;
+}
+
+.safety-air-img img{
+    height: 500px;
+    width: 450px;
+    margin-left: 60px;
+    border-radius: 20px;
+    animation: airfloat 2s linear infinite;
+    margin-top: 30px;
+}
+
+@keyframes airfloat {
+
+    0%,100%{
+        transform: translateY(0rem);
+
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+    
+}
+
+.safety-txt{
+    margin-right: 30px;
+}
+
