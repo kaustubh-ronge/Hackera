@@ -90,14 +90,14 @@ const BookingSchema = new mongoose.Schema({
 const Booking = mongoose.model('Booking', BookingSchema);
 
 // Define static routes and their estimated costs for Maharashtra
-const routesData = [
-    { start: 'mumbai', end: 'pune', cost: 500, middleRoutes: ['lonavala'] },
-    { start: 'mumbai', end: 'nagpur', cost: 1200, middleRoutes: ['indore', 'bhopal'] },
-    { start: 'pune', end: 'nagpur', cost: 1000, middleRoutes: ['aurangabad', 'amravati'] },
-    { start: 'mumbai', end: 'aurangabad', cost: 800, middleRoutes: ['shirdi'] },
-    { start: 'pune', end: 'aurangabad', cost: 700, middleRoutes: ['nashik'] },
-    { start: 'nagpur', end: 'aurangabad', cost: 900, middleRoutes: ['bhusawal'] }
-];
+// const routesData = [
+//     { start: 'mumbai', end: 'pune', cost: 500, middleRoutes: ['lonavala'] },
+//     { start: 'mumbai', end: 'nagpur', cost: 1200, middleRoutes: ['indore', 'bhopal'] },
+//     { start: 'pune', end: 'nagpur', cost: 1000, middleRoutes: ['aurangabad', 'amravati'] },
+//     { start: 'mumbai', end: 'aurangabad', cost: 800, middleRoutes: ['shirdi'] },
+//     { start: 'pune', end: 'aurangabad', cost: 700, middleRoutes: ['nashik'] },
+//     { start: 'nagpur', end: 'aurangabad', cost: 900, middleRoutes: ['bhusawal'] }
+// ];
 
 // Endpoint for booking
 app.post('/api/bookings', async (req, res) => {

@@ -1,34 +1,34 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const response = await fetch('/api/me');
-        if (response.ok) {
-            const data = await response.json();
-            // Show user info and logout link, hide login and register links
-            document.getElementById('user-info').style.display = 'block';
-            document.getElementById('username').textContent = `Welcome, ${data.name}`;
-            document.getElementById('logout').style.display = 'inline'; // Show logout link
-            document.getElementById('login-link').style.display = 'none';
-            document.getElementById('register-link').style.display = 'none';
-        } else {
-            // Hide user info and logout link when not logged in
-            document.getElementById('user-info').style.display = 'none';
-            document.getElementById('logout').style.display = 'none';
-            document.getElementById('login-link').style.display = 'inline';
-            document.getElementById('register-link').style.display = 'inline';
-        }
-    } catch (error) {
-        console.error('Error fetching user data:', error);
-    }
-});
+//     try {
+//         const response = await fetch('/api/me');
+//         if (response.ok) {
+//             const data = await response.json();
+//             // Show user info and logout link, hide login and register links
+//             document.getElementById('user-info').style.display = 'block';
+//             document.getElementById('username').textContent = `Welcome, ${data.name}`;
+//             document.getElementById('logout').style.display = 'inline'; // Show logout link
+//             document.getElementById('login-link').style.display = 'none';
+//             document.getElementById('register-link').style.display = 'none';
+//         } else {
+//             // Hide user info and logout link when not logged in
+//             document.getElementById('user-info').style.display = 'none';
+//             document.getElementById('logout').style.display = 'none';
+//             document.getElementById('login-link').style.display = 'inline';
+//             document.getElementById('register-link').style.display = 'inline';
+//         }
+//     } catch (error) {
+//         console.error('Error fetching user data:', error);
+//     }
+// });
 
-// Logout functionality
-document.getElementById('logout').addEventListener('click', async () => {
-    try {
-        await fetch('/api/logout', { method: 'POST' });
-        window.location.reload();
-    } catch (error) {
-        console.error('Error logging out:', error);
-    }
+// // Logout functionality
+// document.getElementById('logout').addEventListener('click', async () => {
+//     try {
+//         await fetch('/api/logout', { method: 'POST' });
+//         window.location.reload();
+//     } catch (error) {
+//         console.error('Error logging out:', error);
+//     }
 
 
 
@@ -462,6 +462,38 @@ function predictCities() {
         tableBody.innerHTML = '<tr><td colspan="3" class="text-center">No available routes for the selected locations</td></tr>';
     }
 }
+
+
+    try {
+        const response = await fetch('/api/me');
+        if (response.ok) {
+            const data = await response.json();
+            // Show user info and logout link, hide login and register links
+            document.getElementById('user-info').style.display = 'block';
+            document.getElementById('username').textContent = `Welcome, ${data.name}`;
+            document.getElementById('logout').style.display = 'inline'; // Show logout link
+            document.getElementById('login-link').style.display = 'none';
+            document.getElementById('register-link').style.display = 'none';
+        } else {
+            // Hide user info and logout link when not logged in
+            document.getElementById('user-info').style.display = 'none';
+            document.getElementById('logout').style.display = 'none';
+            document.getElementById('login-link').style.display = 'inline';
+            document.getElementById('register-link').style.display = 'inline';
+        }
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+    }
+});
+
+// Logout functionality
+document.getElementById('logout').addEventListener('click', async () => {
+    try {
+        await fetch('/api/logout', { method: 'POST' });
+        window.location.reload();
+    } catch (error) {
+        console.error('Error logging out:', error);
+    }
 
 
 
