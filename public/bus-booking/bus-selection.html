@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bus Booking</h1>
+    </header>
+
+    <div class="container">
+        <h2>Select Your Bus</h2>
+
+        <form id="bus-selection-form">
+            <div class="form-group">
+                <label for="route">Route:</label>
+                <select id="route" name="route" required>
+                    <option value="">Select Route</option>
+                    <option value="route1">Route 1 - City A to City B</option>
+                    <option value="route2">Route 2 - City C to City D</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="adults">Adults:</label>
+                <input type="number" id="adults" name="adults" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="children">Children:</label>
+                <input type="number" id="children" name="children" min="0">
+            </div>
+
+            <button type="submit">Search Buses</button>
+        </form>
+
+        <div id="bus-results" class="bus-results"></div>
+    </div>
+
+    <script src="bus-selection.js"></script>
+</body>
+</html>

@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const User = require('./models/user');
+const HotelBooking = require('./models/HotelBooking');
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -124,6 +126,8 @@ app.post('/api/bookings', async (req, res) => {
         res.status(400).send('Error saving booking');
     }
 });
+
+
 
 // Start the server
 app.listen(PORT, () => {

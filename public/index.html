@@ -7,30 +7,33 @@
   <title>Home</title>
 
   <!-- Bootstrap Link -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
 
-<!-- Icon Font Stylesheet -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-<!-- Custom Stylesheet -->
-<link rel="stylesheet" href="styles.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="weather/style.css">
 
-<!-- jQuery -->
+  <!-- jQuery -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- ScrollReveal CDN -->
-<script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- ScrollReveal CDN -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
 
 </head>
@@ -51,19 +54,21 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
           <li class="nav-item">
             <a class="nav-link" href="#about-section">About Us</a>
           </li>
-         
+
           <li class="nav-item">
             <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#testimonials">Testimonials</a>
+            <a class="nav-link" href="#weather">Open Weather app</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#gallery">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#book">Book</a>
+            <a class="nav-link" href="booking/hotel.html" target="_blank">Hotel Book</a>
           </li>
+
+
 
           <div id="authLinks">
             <ul>
@@ -109,14 +114,14 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
   <section id="about-section">
     <div class="container">
 
-      
+
       <div class="row">
 
         <div class="main-txt ms-10 " style="margin-top: 50px;">
           <h1><span>A</span>bout Us</h1>
-  
+
         </div>
-       
+
 
         <div class="col-6" style="margin-top: 30px;">
           <form id="bookingForm">
@@ -124,9 +129,9 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
             <input type="text" id="start" placeholder="start location" name="start" required>
             <input type="text" id="end" name="end" placeholder="end location" required>
             <div class="about-btn">
-            <!-- <button id="submit" type="submit">Submit</button> -->
-            <button id="checkCities">Check city</button>
-          </div>
+              <!-- <button id="submit" type="submit">Submit</button> -->
+              <button id="checkCities">Check city</button>
+            </div>
           </form>
 
         </div>
@@ -140,8 +145,9 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
               </tr>
             </thead>
             <tbody></tbody>
-          </table>
-        
+              
+          </table>
+
         </div>
       </div>
 
@@ -158,9 +164,9 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
   <section class="services" id="services">
     <div class="container">
 
-      
-      <div class="row" >
-        <div class="main-txt" >
+
+      <div class="row">
+        <div class="main-txt">
           <h1><span>S</span>ervices</h1>
         </div>
 
@@ -247,7 +253,51 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
   </section>
   <!-- Section Services End -->
 
-  <!-- testimonials -->
+  <!-- weather -->
+
+  <section id="weather">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <div class="custom-text">
+              <h1>Welcome To Our Weather App</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis ratione, blanditiis eius exercitationem perspiciatis accusantium eum culpa nostrum quaerat architecto aspernatur laudantium vero error ipsam mollitia ab sunt veritatis?</p>
+          </div>
+      </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="search">
+              <input type="text" placeholder="enter city name" spellcheck="false">
+              <button><img src="weather/images/search.png" alt=""></button>
+            </div>
+            <div class="weather">
+              <img src="weather/images/rain.png" class="weather-icon">
+              <h1 class="temp">22°C</h1>
+              <h2 class="city">New York</h2>
+              <div class="details">
+                <div class="col">
+                  <img src="weather/images/humidity.png">
+                  <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <img src="weather/images/wind.png">
+                  <div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+  </section>
 
 
 
@@ -290,7 +340,7 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
 
 
   <script>
-    
+
     ScrollReveal().reveal('.c1, .c2, .c3, .c4, .c5, .c6', {
       delay: 300,
       reset: true,
@@ -321,14 +371,34 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
       interval: 150,
       viewFactor: 0.5 // Trigger when 20% of the element is visible
     });
+    ScrollReveal().reveal(' .custom-text', {
+      delay: 300,
+      reset: true,
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-in',
+      origin: 'left',
+      interval: 150,
+      viewFactor: 0.5 // Trigger when 20% of the element is visible
+    });
+    ScrollReveal().reveal('#weather .container .card', {
+      delay: 300,
+      reset: true,
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-in',
+      origin: 'right',
+      interval: 150,
+      viewFactor: 0.5 // Trigger when 20% of the element is visible
+    });
 
-    
+
 
 
   </script>
-  
 
 
+   
 
   <!-- bootstrap cdn js links -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -343,6 +413,7 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
 
+  <script src="weather/script.js"></script>
 
   <script src="script.js"></script>
 

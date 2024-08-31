@@ -441,6 +441,53 @@ function predictCities() {
         }, 500); 
     });
 
+    let map;
+let directionsService;
+let directionsRenderer;
+
+function initMap() {
+    
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 }, 
+        zoom: 8
+    });
+
+    
+    directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(map);
+
+    
+    document.getElementById('get-directions').addEventListener('click', function() {
+        calculateAndDisplayRoute();
+    });
+}
+
+function calculateAndDisplayRoute() {
+    const destination = document.getElementById('location-input').value;
+    
+    if (!destination) {
+        alert('Please enter a destination.');
+        return;
+    }
+
+    directionsService.route({
+        origin: { lat: -34.397, lng: 150.644 }, 
+        destination: destination,
+        travelMode: 'DRIVING'
+    }, (response, status) => {
+        if (status === 'OK') {
+            directionsRenderer.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+}
+
+
+window.onload = initMap;
+
+
     // ScrollReveal({
     //     reset : true,
     //     distance: "60px",

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="payment-options.css">
+</head>
+<body>
+    <header>
+        <h1>Choose Payment Method</h1>
+    </header>
+
+    <div class="container">
+        <div class="payment-options">
+            <h2>Select your preferred payment method:</h2>
+
+            <div class="payment-option" id="phonepe-option">
+                <h3>PhonePe</h3>
+                <img src="https://example.com/phonepe-logo.png" alt="PhonePe Logo">
+                <button onclick="proceedToPayment('PhonePe')">Pay with PhonePe</button>
+            </div>
+
+            <div class="payment-option" id="googlepay-option">
+                <h3>Google Pay</h3>
+                <img src="https://example.com/googlepay-logo.png" alt="Google Pay Logo">
+                <button onclick="proceedToPayment('Google Pay')">Pay with Google Pay</button>
+            </div>
+
+            <div class="payment-option" id="card-option">
+                <h3>Credit/Debit Card</h3>
+                <img src="https://example.com/card-logo.png" alt="Card Logo">
+                <button onclick="proceedToPayment('Card')">Pay with Card</button>
+            </div>
+
+            <div class="payment-option" id="scanner-option">
+                <h3>QR Code Scanner</h3>
+                <img src="https://example.com/scanner-logo.png" alt="Scanner Logo">
+                <button onclick="proceedToPayment('Scanner')">Pay with QR Code</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="payment-options.js"></script>
+</body>
+</html>
