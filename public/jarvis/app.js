@@ -17,21 +17,21 @@ function wishMe(){
     var hour = day.getHours();
 
     if(hour>=0 && hour<12){
-        speak("Good Morning Kaustubh...")
+        speak("Good Morning sir...")
     }
 
     else if(hour>12 && hour<17){
-        speak("Good Afternoon Kaustubh...")
+        speak("Good Afternoon Master...")
     }
 
     else{
-        speak("Good Evenining Kaustubh...")
+        speak("Good Evenining Sir...")
     }
 
 }
 
 window.addEventListener('load', ()=>{
-    speak("Initializing JARVIS..");
+    speak("Initializing request..");
     wishMe();
 });
 

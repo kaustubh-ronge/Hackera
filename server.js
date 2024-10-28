@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-mongoose.connect('mongodb://localhost:27017/yourDatabaseName')
+mongoose.connect('mongodb://localhost:27017/Hackera')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
@@ -64,13 +64,13 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-// Logout route
+
 app.post('/api/logout', (req, res) => {
     res.clearCookie('username');
     res.send('Logged out');
 });
 
-// Route to get the logged-in user's data
+
 app.get('/api/me', (req, res) => {
     if (req.cookies.username) {
         res.json({ name: req.cookies.username });
@@ -89,15 +89,6 @@ const BookingSchema = new mongoose.Schema({
 
 const Booking = mongoose.model('Booking', BookingSchema);
 
-// Define static routes and their estimated costs for Maharashtra
-// const routesData = [
-//     { start: 'mumbai', end: 'pune', cost: 500, middleRoutes: ['lonavala'] },
-//     { start: 'mumbai', end: 'nagpur', cost: 1200, middleRoutes: ['indore', 'bhopal'] },
-//     { start: 'pune', end: 'nagpur', cost: 1000, middleRoutes: ['aurangabad', 'amravati'] },
-//     { start: 'mumbai', end: 'aurangabad', cost: 800, middleRoutes: ['shirdi'] },
-//     { start: 'pune', end: 'aurangabad', cost: 700, middleRoutes: ['nashik'] },
-//     { start: 'nagpur', end: 'aurangabad', cost: 900, middleRoutes: ['bhusawal'] }
-// ];
 
 app.post('/api/bookings', async (req, res) => {
     const {  date, start, end } = req.body;

@@ -4159,9 +4159,8 @@ const routes = [
                 { mode: "Flight", cost: 15000 }
             ]
         },
-        // Route 26
-        
-       
+
+  
     
 
 ];

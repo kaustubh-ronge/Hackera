@@ -98,6 +98,18 @@ tr:hover {
     background-attachment: fixed;
     padding: 200px 0 100px 0;
 }
+#about-section {
+
+    width: 100%;
+    height: auto;
+    min-height: 750px;
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 200px 0 100px 0;
+}
 
 
 #home .container h1,
@@ -533,17 +545,6 @@ form input:hover {
 
 
 /* about section */
-
-#about-section {
-    height: 100vh;
-
-    background: url('./images/bg.jpg');
-    background-size: cover;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-}
 
 
 
